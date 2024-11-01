@@ -1,0 +1,43 @@
+@import "checkbox";
+
+@import "stripe/theme-stripe";
+@import "flat/theme-flat";
+@import "night/theme-night";
+@import "theme-none";
+
+// Common styles for all stripe themes
+.wpz-payments-container[data-stripe-theme="flat"],
+.wpz-payments-container[data-stripe-theme="night"],
+.wpz-payments-container[data-stripe-theme="stripe"] {
+
+  // Input
+  .wpz-payments-form-field {
+    transition  : all .15s ease;
+    font-size   : 16px;
+    line-height : 1.15;
+    }
+
+  // Button
+  button.et_pb_button {
+    display      : inline-block;
+    border-width : 0;
+    font-size    : 16px;
+    font-weight  : 600;
+    padding      : 12px 16px;
+
+    &:after, &:before {
+      display : none;
+      }
+
+    &:disabled, &:disabled:hover {
+      opacity : 0.5;
+      cursor  : default;
+      }
+    }
+
+  button.wpz-payments-pay-button.ds-dpm-loading {
+    &:after {
+      display : block;
+      }
+    }
+  }

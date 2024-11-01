@@ -1,0 +1,27 @@
+#ds_divi_payment_module_license_key_form,
+#wpz-payments-settings-settings {
+
+  label {
+    @include formLabelMixin();
+    }
+
+  input[type="text"], input[type="password"], select {
+    @include formInputMixin();
+    margin : 0;
+    }
+
+  input[type=checkbox] {
+    @include formCheckboxMixin();
+    }
+
+  input[type=radio] {
+    @include formRadioMixin();
+    }
+
+  // Button
+  input[type="submit"] {
+    @include button;
+    @include sizeButtonMixin(medium);
+    @include colorButtonMixin(purple);
+    }
+  }

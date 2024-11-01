@@ -1,0 +1,37 @@
+
+.wpz-payments-display-modal {
+  position         : fixed;
+  background-color : rgba(0, 0, 0, .8);
+  width            : 100%;
+  height           : 100%;
+  top              : 0;
+  left             : 0;
+  right            : 0;
+  bottom           : 0;
+  display          : none;
+  overflow         : auto;
+  z-index          : calc((100 * 100 * 100) - 1);
+  transition       : opacity .15s linear;
+  align-items      : center;
+  justify-content  : center;
+
+  &.wpz-payments-active {
+    display : -ms-flexbox;
+    display : flex;
+    }
+  }
+
+.wpz-payment-modal-content {
+  position         : relative;
+  width            : 80%;
+  max-width        : 1080px;
+  pointer-events   : auto;
+  background-color : #FFF;
+  padding          : 1rem;
+  transition       : -webkit-transform .3s ease-out;
+  transition       : transform .3s ease-out;
+
+  .wpz-payments-close-button {
+    margin-bottom : 25px;
+    }
+  }

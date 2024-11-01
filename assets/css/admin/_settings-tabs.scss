@@ -1,0 +1,90 @@
+#wpz-payments-settings-tabs {
+  margin           : 0;
+  background-color : $dsMediumPurple;
+  overflow         : hidden;
+  border-top: 1px solid $wpz_secondary;
+
+  li {
+    margin      : 0;
+    float       : left;
+    display     : inline-block;
+    font-weight : 500;
+
+    font-size   : 12px;
+
+    @media (max-width : 600px) {
+      float     : none;
+      display   : block;
+      font-size : 12px;
+      }
+
+    a {
+      background-color   : transparent;
+      color              : rgba(255, 255, 255, 0.9);
+      cursor             : pointer;
+      padding            : 13px 16px !important;
+      outline            : none;
+      text-decoration    : none;
+      -webkit-transition : all ease-in 0.3s;
+      transition         : all ease-in 0.3s;
+      box-shadow         : none;
+      display            : block;
+      letter-spacing     : 0.29px;
+
+      &:hover {
+        color            : #FFF;
+        background-color : $dsMediumPurple;
+        }
+      }
+
+    &.wpz-payments-settings-active a {
+      opacity          : 1;
+      background-color : $wpz_secondary ;
+      color            : #FFF;
+      }
+
+    &.wpz-payments-settings-disabled a {
+      cursor : default;
+      color  : #7047FF;
+
+      &:hover {
+        color            : #7047FF;
+        background-color : transparent;
+        }
+      }
+    }
+  }
+
+/* Settings tab content */
+#wpz-payments-settings-tabs-content {
+  box-shadow       : $boxShadow;
+  background-color : #F9FAFB;
+  padding          : 45px 28px 45px;
+  min-height       : 300px;
+  border-radius: 0 0 16px 16px;
+
+  p {
+    margin-bottom: 35px;
+    }
+
+  & > div {
+    display : none;
+    }
+
+  & > .wpz-payments-settings-active {
+    display : block;
+    }
+  }
+
+
+.wpz-payments-settings-box {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    }
+
+  @media (min-width: $breakSmall) {
+    padding-right: 35px;
+    }
+  }

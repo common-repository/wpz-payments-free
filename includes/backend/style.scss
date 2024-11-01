@@ -1,0 +1,42 @@
+/* VB Module List */
+.et-db #et-boc .et-l .et-fb-modules-list li.wpz_payments_divi_module {
+  border-left   : 5px solid #6A39E4 !important;
+  border-radius : 0 5px 5px 0 !important;
+  padding       : 15px 15px 10px 10px;
+  }
+
+.et-db #et-boc .et-l .et-fb-modules-list li.wpz_payments_divi_module svg {
+  max-height : 25px;
+  }
+
+.et-db #et-boc .et-l .et-fb-modules-list li.wpz_payments_divi_module .et_module_title {
+  margin-top : 8px;
+  }
+
+body.wpz_payments_divi_module-modal-open {
+  #et-fb-app .et-fb-modal__content {
+    .et-fb-item-addable-button, .et-fb-settings-module-item-button--copy, .et-fb-settings-module-item-button--delete {
+      display : none;
+      }
+    }
+  }
+
+/* Multi select field */
+.et-db #et-boc .et-l .et-fb-option--DSLayoutMultiselect-DSDPM {
+  .preloader-icons-field {
+    svg {
+      width     : 30px;
+      height    : 30px;
+      max-width : 100%;
+      margin    : 8px auto;
+
+      &.spinner_fill, &.spinner_spinning_circles circle {
+        fill : #4C5866;
+        }
+
+      &.spinner_stroke, &.spinner_spinning_circles {
+        stroke : #4C5866;
+        }
+      }
+    }
+  }

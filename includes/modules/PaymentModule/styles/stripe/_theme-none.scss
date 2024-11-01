@@ -1,0 +1,103 @@
+
+.wpz-payments-container[data-stripe-theme="none"] {
+
+  // Spacing
+  .wpz-payments-price,
+  .wpz-payments-quantity,
+  .wpz-payments-form,
+  .wpz-payments-notes,
+  .wpz-payments-agreement {
+    margin-bottom : 10px;
+    }
+
+  // Input
+  .wpz-payments-form-field {
+    font-size        : 14px;
+    line-height      : normal;
+    padding          : 16px;
+    color            : #999;
+    background-color : #EEE;
+    border-radius    : 0;
+    transition       : all 0.2s ease;
+    border           : 0 solid #BBB;
+    box-shadow       : none;
+
+    &::placeholder {
+      color : #999;
+      }
+
+    &:disabled {
+      background-color : #EEE;
+      color            : #999;
+      box-shadow       : none;
+      }
+
+    &:focus {
+      outline    : none;
+      box-shadow : none;
+      }
+    }
+
+  label.wpz-field-invalid .wpz-payments-form-field {
+    color  : #FF0000;
+    border : 1px solid #FF0000;
+    }
+
+  // Labels
+  .wpz-payments-label {
+    //font-size     : 14px;
+    margin-bottom : 0.5em;
+    //font-weight   : 400;
+    }
+
+  // Checkbox
+  .wpz-payments-agreement {
+    .checkbox-StyledInput {
+      width            : 18px;
+      height           : 18px;
+      background-color : #EEE;
+
+      &:before {
+        content           : "";
+        position          : absolute;
+        top               : 50%;
+        left              : 50%;
+        -webkit-transform : translate(-50%, -50%);
+        transform         : translate(-50%, -50%);
+        }
+      }
+
+    input[type=checkbox] {
+      width  : 18px;
+      height : 18px;
+
+      &:checked ~ .checkbox-StyledInput:before {
+        content     : "N";
+        font-family : ETmodules;
+        color       : #2EA3F2;
+        font-size   : 13px;
+        font-weight : 600;
+        line-height : 1;
+        text-align  : center;
+        }
+      }
+    }
+
+  // Error
+  .wpz-payments-validation-error {
+    color : #FF0000;
+    }
+
+  .wpz-payments-validation-error {
+    margin-bottom : 0.25rem;
+    }
+
+  .wpz-payments-error {
+    margin-top : 1.25rem;
+    }
+
+  // Success
+  .wpz-payments-success {
+    margin-top : 1.25rem;
+    }
+  }

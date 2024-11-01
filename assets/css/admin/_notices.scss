@@ -1,0 +1,11 @@
+// Notice
+#wpz-payments-settings .wpz-payments-footnote,
+.wpz-payments-footnote {
+   @include notificationMixin("error");
+  }
+
+// Other
+.wpz-payments-footnote {
+  margin-top : 20px !important;
+  }
+

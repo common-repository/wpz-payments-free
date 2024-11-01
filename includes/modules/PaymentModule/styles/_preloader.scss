@@ -1,0 +1,62 @@
+.wpz-payments-container {
+
+  & > * {
+    transition : opacity 0.3s linear;
+    }
+
+  &.wpz-payments-loading {
+    & > * {
+      opacity : 0;
+      }
+
+    .wpz-payments-preloader {
+      opacity : 1;
+      z-index : 1;
+      }
+
+    // Fix jumping issue
+
+    .wpz-payments-form {
+      min-height : 248.562px;
+      }
+
+    &[data-stripe-theme="flat"] .wpz-payments-form {
+      min-height : 266.562px;
+      }
+
+    &[data-stripe-theme="none"] .wpz-payments-form {
+      min-height : 277.391px;
+      }
+    }
+
+  .wpz-payments-preloader {
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 100%;
+    z-index         : -1;
+    display         : -ms-flexbox;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    opacity         : 0;
+
+    .wpz-payments-preloader-icon {
+      display     : block;
+      position    : relative;
+      line-height : 0;
+
+      .wpz_payments_spinner {
+        width     : 50px;
+        height    : auto;
+        max-width : 100%;
+        }
+      }
+
+    .wpz-payments-preloader-icon + .wpz-payments-preloader-text {
+      margin-top : 20px;
+      }
+    }
+  }

@@ -1,0 +1,33 @@
+.wpz-upgrade-notice-container {
+	
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	z-index: 999999;
+	
+	.wpz-upgrade-notice {
+		max-width: 400px;
+		background-color: #fff;
+		margin: 0 auto;
+		margin-top: 30vh;
+		padding: 1em;
+		
+		.wpz-upgrade-buttons {
+			text-align: center;
+		
+			button {
+				background-color: #6c2eb9;
+				color: #fff;
+				border: 0;
+				padding: 0.5em 1em;
+				margin: 0 0.5em;
+				border-radius: 5px;
+			}
+		
+		}
+	}
+	
+}

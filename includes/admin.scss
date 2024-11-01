@@ -1,0 +1,41 @@
+#wpz_payment_info {
+	.wpz-payment-meta-3col, .wpz-payment-meta-item, .wpz-payment-meta-full {
+		padding: 1em 0;
+		clear: left;
+	}
+
+	label {
+		font-weight: bold;
+	}
+	.wpz-payment-meta-3col {
+	
+		> div {
+			width: 33.33%;
+			float: left;
+		}
+	}
+	
+	.wpz-payment-meta-item {
+		> div {
+			width: 16.66%;
+			float: left;
+			background-color: #ccc;
+			padding: 0.5em;
+			box-sizing: border-box;
+			white-space: nowrap;
+		}
+		
+		> div:first-child {
+			width: 50%;
+		}
+		
+		label {
+			display: block;
+		}
+	}
+	
+	.notes-textarea {
+		width: 100%;
+		height: 5em;
+	}
+}

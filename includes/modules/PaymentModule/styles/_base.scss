@@ -1,0 +1,312 @@
+.wpz-payments-container {
+  position : relative;
+
+  &.wpz-payments-display-page_button {
+    display : none;
+
+    &.wpz-payments-active {
+      display : block;
+      }
+    }
+
+  .wpz-payments-description {
+    margin-bottom : 20px;
+    }
+
+  .wpz-payments-notes-instructions {
+    margin-bottom : 10px;
+    }
+
+  .wpz-payments-agreement {
+    position     : relative;
+    padding-left : 25px;
+
+    .checkbox-StyledInput {
+      cursor         : pointer;
+      display        : block;
+      pointer-events : none;
+      position       : absolute;
+      top            : 2px;
+      left           : 0;
+      }
+
+    input[type="checkbox"] {
+      -webkit-appearance : none;
+      -moz-appearance    : none;
+      appearance         : none;
+      background         : transparent;
+      border             : none;
+      box-shadow         : none;
+      cursor             : pointer;
+      height             : 16px;
+      opacity            : 0;
+      outline            : none;
+      position           : absolute;
+      top                : 0;
+      left               : 0;
+      width              : 16px;
+      margin             : 0 !important;
+      padding            : 0 !important;
+
+      &:checked ~ .checkbox-StyledInput:before {
+        display : block;
+        }
+
+      &:disabled {
+        & ~ .checkbox-StyledInput, & ~ .checkbox-StyledInput:before {
+          cursor         : default;
+          pointer-events : none
+          }
+        }
+      }
+
+    label {
+      cursor              : pointer;
+      -webkit-user-select : none;
+      -moz-user-select    : none;
+      -ms-user-select     : none;
+      user-select         : none
+      }
+    }
+
+  .wpz-payments-price-wrapper {
+    display     : -ms-flexbox;
+    display     : flex;
+    align-items : center;
+
+    .wpz-payments-price-currency-before_space {
+      margin-right : 12px;
+      }
+
+    .wpz-payments-price-currency-after_space {
+      margin-left : 12px;
+      }
+    }
+
+  .wpz-payments-fixed-price-amount {
+    font-size : 30px;
+    }
+
+  .wpz-payments-button-wrapper {
+    margin-top : 10px;
+    }
+
+  .wpz-payments-confirm {
+    margin-top: 20px;
+
+    p {
+      margin-bottom: 10px;
+      }
+
+    button:not(:last-of-type){
+      margin-right: 5px;
+      }
+  }
+
+
+  .wpz-payments-error,
+  .wpz-payments-success {
+    text-align  : center;
+    line-height : 1.7em;
+    }
+
+  // Form elements
+  label,
+  .wpz-payments-notes-label,
+  .wpz-payments-price-label,
+  .wpz-payments-quantity-label {
+    cursor  : default;
+    display : block;
+    }
+
+  input, optgroup, select, textarea {
+    -webkit-appearance : none;
+    -moz-appearance    : none;
+    appearance         : none;
+    border             : 0;
+    border-radius      : 0;
+    box-shadow         : none;
+    -webkit-filter     : none;
+    filter             : none;
+    font-family        : inherit;
+    font-size          : inherit;
+    line-height        : inherit;
+    vertical-align     : middle;
+    }
+
+  .wpz-payments-form-field {
+    display : block;
+    width   : 100%;
+    }
+
+  textarea {
+    overflow : auto;
+    }
+
+  input[type="checkbox"] {
+    box-sizing : border-box;
+    }
+
+  // Error
+  .wpz-payments-error {
+    color : red;
+    }
+
+  // Buttons
+  button.wpz-payments-pay-button {
+    display : inline-block;
+
+    &.ds-dpm-loading {
+      cursor      : default;
+      text-indent : 200%;
+      white-space : nowrap;
+      overflow    : hidden;
+
+      &:after {
+        content                   : "\e02d" !important;
+        font-family               : ETModules !important;
+        font-size                 : inherit !important;
+        margin                    : 0 !important;
+        display                   : block !important;
+        opacity                   : 1 !important;
+
+        position                  : absolute !important;
+        top                       : 50% !important;
+        left                      : 50% !important;
+        transform                 : translate(-50%, -50%);
+
+        animation-name            : spin;
+        animation-duration        : 5000ms;
+        animation-iteration-count : infinite;
+        animation-timing-function : linear;
+
+        text-indent               : 0;
+        }
+      }
+    }
+
+  button.wpz-payments-close-button {
+    cursor             : pointer;
+    background         : transparent;
+    box-shadow         : none;
+    border-width       : 0;
+    border-style       : solid;
+    font-size          : 30px;
+    -webkit-transition : all .2s;
+    transition         : all .2s;
+    padding            : 0;
+    margin             : 0;
+
+    &:after {
+      font-family                   : ETmodules !important;
+      speak                         : none;
+      line-height                   : 1;
+      content                       : "\4d";
+      text-transform                : none;
+      -webkit-font-feature-settings : "kern" off;
+      font-feature-settings         : "kern" off;
+      font-variant                  : none;
+      font-style                    : normal;
+      font-weight                   : 400;
+      text-shadow                   : none;
+      }
+    }
+
+  // Fix jumping issue
+  .wpz-payments-form {
+    min-height : 249px;
+    }
+	
+  .wpz-payments-credit {
+    color: #aaa;
+	margin-top: 1em;
+	display: block;
+	
+	a {
+	color: inherit;
+	text-decoration: underline;
+	}
+  }
+  
+  .wpz-payments-paypal-button {
+    display: inline-block;
+	width: 100%;
+  }
+  
+  .wpz-payments-type-options {
+	list-style: none;
+	padding: 0;
+	margin: 0.75em 0;
+	text-align: center;
+	
+	li {
+		display: inline-block;
+		padding: 0.5em 1em;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		margin: 0.25em;
+		
+		a {
+			color: inherit;
+		}
+	}
+  }
+  
+  &.wpz-payments-stripe .wpz-payments-type-option-stripe, &.wpz-payments-paypal .wpz-payments-type-option-paypal {
+		background-color: #999;
+		border-color: #999;
+		
+		a {
+			color: #fff;
+		}
+  }
+  
+   &.wpz-payments-stripe {
+	.wpz-payments-credit-paypal,
+	.wpz-payments-paypal-button {
+		display: none !important;
+	}
+	
+   }
+   
+   &.wpz-payments-paypal {
+	.wpz-payments-credit-stripe,
+	.wpz-payments-form,
+	.wpz-payments-pay-button {
+		display: none !important;
+	}
+	
+   }
+
+  .wpz-payments-reload-info {
+    margin: 1.8em 0;
+    }
+  }
+
+.wpz-payments-container, .wpz_payments_divi_module {
+  button.et_pb_button {
+    cursor       : pointer;
+    color        : #2EA3F2;
+    border-style : solid;
+
+    &:hover {
+      background-color : rgba(0, 0, 0, .05);
+      }
+    }
+  }
+
+// Override Divi styles when button icon is off
+body #page-container .et_pb_section .wpz_payments_divi_module .wpz-payments-container {
+  button.wpz-payments-pay-button.ds-dpm-loading:after {
+    display : block !important;
+    }
+  }
+
+@keyframes spin {
+  from {
+    transform : translate(-50%, -50%) rotate(0deg);
+    }
+  to {
+    transform : translate(-50%, -50%) rotate(360deg);
+    }
+  }

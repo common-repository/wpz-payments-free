@@ -1,0 +1,125 @@
+@import "variables";
+
+.wpz-payments-container[data-stripe-theme="stripe"] {
+  //font-family : $stripe--fontFamily;
+  //line-height : 1.15;
+  //color       : $stripe--colorText;
+  //font-size   : $stripe--fontSizeBase;
+  font-weight : normal;
+
+  // Spacing
+  .wpz-payments-price,
+  .wpz-payments-quantity,
+  .wpz-payments-form,
+  .wpz-payments-notes,
+  .wpz-payments-agreement {
+    margin-bottom : $stripe--spacingGridRow;
+    }
+
+  // Input
+  .wpz-payments-form-field {
+    padding          : 12px;
+    color            : $stripe--colorText;
+    background-color : $stripe--colorBackground;
+    border-radius    : $stripe--borderRadius;
+    border           : 1px solid $stripe--p-colorBackgroundDeemphasize10;
+    box-shadow       : 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+
+    &::placeholder {
+      color : $stripe--colorTextPlaceholder;
+      }
+
+    &:disabled {
+      background-color : $stripe--p-colorBackgroundDisabled;
+      color            : $stripe--colorTextPlaceholder;
+      border-color     : $stripe--p-colorBackgroundDisabledDeemphasize05;
+      box-shadow       : none;
+      }
+
+    &:focus {
+      outline      : $stripe--focusOutline;
+      border-color : $stripe--p-colorPrimaryAlpha50;
+      box-shadow   : 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), $stripe--focusBoxShadow;
+      }
+    }
+
+  label.wpz-field-invalid .wpz-payments-form-field {
+    color        : $stripe--colorDanger;
+    border-color : $stripe--colorDanger;
+    box-shadow   : 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02), 0 0 0 1px $stripe--colorDanger;
+    }
+
+  // Labels
+  .wpz-payments-label {
+    margin-bottom : $stripe--p-spacing1;
+    font-size     : $stripe--fontSizeSm;
+    font-weight   : $stripe--fontWeightNormal;
+    transition    : transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+  // Button
+  button.et_pb_button {
+    transition       : all .15s ease;
+    background-color : $stripe--colorPrimary;
+    color            : $stripe--colorPrimaryText;
+    border-radius    : $stripe--borderRadius;
+    box-shadow       : 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+
+    &:hover, &:active {
+      filter : contrast(115%);
+      }
+    }
+
+  // Button Secondary
+  button.et_pb_button.wpz-payments-button-secondary {
+    background-color : $stripe--p-colorBackgroundLightenAbsolute05;
+    color            : $stripe--colorBackgroundText;
+    box-shadow: 0px 2px 5px 0px rgba(60, 66, 87, 0.08), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    border: 1px solid #D5DBE1;
+    }
+
+  // Checkbox
+  .wpz-payments-agreement {
+    .checkbox-StyledInput {
+      background-color : $stripe--colorBackground;
+      border-radius    : $stripe--borderRadius;
+      border           : 1px solid $stripe--p-colorBackgroundDeemphasize10;
+      box-shadow       : 0px 1px 1px rgba(0, 0, 0, 0.03), 0px 3px 6px rgba(0, 0, 0, 0.02);
+
+      &:before {
+        border-bottom : 3px solid hsla(0, 0%, 10%, .9);
+        border-right  : 3px solid hsla(0, 0%, 10%, .9);
+        }
+      }
+
+    input[type=checkbox] {
+      &:focus ~ .checkbox-StyledInput {
+        box-shadow : 0 0 0 1px rgba(50, 151, 211, .3), 0 1px 1px 0 rgba(0, 0, 0, .07), 0 0 0 4px rgba(50, 151, 211, .3);
+        }
+      }
+    }
+
+  // Error
+  .wpz-payments-validation-error,
+  .wpz-payments-error {
+    color       : $stripe--colorDanger;
+    font-weight : $stripe--fontWeightNormal;
+    font-size   : $stripe--fontSizeSm;
+    }
+
+  .wpz-payments-validation-error {
+    margin-bottom : $stripe--p-spacing1;
+    }
+
+  .wpz-payments-error {
+    margin-top : $stripe--p-spacing5;
+    }
+
+  // Success
+  .wpz-payments-success {
+    margin-top  : $stripe--p-spacing5;
+    color       : $stripe--colorSuccess;
+    font-weight : $stripe--fontWeightNormal;
+    font-size   : $stripe--fontSizeSm;
+    }
+  }

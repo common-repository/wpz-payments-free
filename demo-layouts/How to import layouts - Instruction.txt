@@ -1,0 +1,22 @@
+
+Thank you for downloading Divi layouts from WP Zone
+Please read the following instructions thoroughly. 
+
+How to Install the layouts:
+
+1. Make sure Simple Payments for Divi is active on your site: https://wpzone.co/product/simple-payment-module-for-divi/
+2. Log into your WordPress website
+3. Navigate to Divi > Divi Library
+4. Click on ‘Import & Export’
+5. Select ‘Import’ from the ‘Portability’ pop up
+6. Click ‘Choose File’ and select the JSON file from your computer
+7. Once the JSON layout is selected, click ‘Import Divi Builder Layouts’ and wait for the import process to complete. 
+
+Adding Library Items To Your Page
+Once an item has been added to your Divi Library, it can be quickly accessed when building new pages. Click on the + icon or "Add from Library" button. Choose the layout that you would like to import.
+
+Read more about Divi Library: https://www.elegantthemes.com/documentation/divi/divi-library/
+
+If you have any problems, contact our support.
+ 
+ 
